@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perkhidmatan Kami - MehTravel</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="services.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">MehTravel</a>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="destination.html" class="dropbtn">Destinations <span class="chevron">▾</span></a>
+                    <div class="dropdown-content">
+                        <a href="pahang.html">Pulau Tioman</a>
+                        <a href="terengganu.html">Pulau Redang</a>
+                        <a href="perak.html">Pulau Pangkor</a>
+                        <a href="sabah.html">Pulau Sipadan</a>
+                        <a href="kedah.html">Pulau Tuba</a>
+                    </div>
+                </div>
+                <a href="services.html" class="active">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">About<span class="chevron">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="story.html">Our Story</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a href="tel:+6019-4881401" class="contact-number">
+                    <i class="fas fa-phone"></i> +6019-4881401
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-services">
+            <div class="hero-content-services">
+                <h1 class="reveal-text-left">Complete Travel Services by MehTravel</h1>
+                <p class="reveal-text-right">We offer a wide range of services to make your vacation smooth, enjoyable and unforgettable.</p>
+            </div>
+        </section>
+
+        <section class="services-content-section">
+            <h2 class="section-title reveal-top">Our Main Services</h2>
+
+            <div class="service-block reveal-left">
+                <div class="service-image">
+                    <img src="gambar/service.jpg" alt="Pemandu Pelancong Profesional">
+                </div>
+                <div class="service-description">
+                    <h3>Professional Tour Guide Services</h3>
+                    <p>
+                        Explore your dream destinations with confidence alongside our knowledgeable and experienced tour guides. They will not only take you to exciting locations but also share local stories, culture, and history to enrich your travel experience. From historic cities to breathtaking natural landscapes, our guides ensure every moment is meaningful and safe.
+                    </p>
+                    <a href="contact.html" class="btn-primary">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="service-block reveal-right reverse-on-mobile">
+                <div class="service-image">
+                    <img src="images/kl.jpg" alt="Perancangan Jadual Perjalanan">
+                </div>
+                <div class="service-description">
+                    <h3>Travel Planning & Itinerary Arrangement</h3>
+                    <p>
+                        Let MehTravel handle your entire travel planning from A to Z! We will craft a complete itinerary tailored to your interests, preferences, and budget. This includes accommodation bookings, transportation, activities, and dining recommendations. Your only focus is to enjoy the trip—no need to worry about logistics. We ensure every detail is carefully taken in care.
+                    </p>
+                </div>
+            </div>
+
+           
+
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2025 MehTravel. All rights reserved.</p>
+            <p>Email: amzarsafwan04@gmail.com | Tel: +6019-4881401</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Pastikan pustaka ScrollReveal dimuatkan sebelum skrip ini
+        if (typeof ScrollReveal !== 'undefined') {
+            ScrollReveal({
+                distance: '60px', 
+                duration: 1000,  
+                easing: 'ease-out',
+                reset: false
+            });
+
+            // Hero section text animation
+            ScrollReveal().reveal('.hero-content-services .reveal-text-left', {
+                origin: 'left',
+                delay: 500, // Delay sedikit untuk hero background fade in dulu
+                distance: '70px',
+                opacity: 0
+            });
+            ScrollReveal().reveal('.hero-content-services .reveal-text-right', {
+                origin: 'right',
+                delay: 600, // Delay sedikit selepas reveal-text-left
+                distance: '70px',
+                opacity: 0
+            });
+
+            // Section title animation
+            ScrollReveal().reveal('.services-content-section .section-title.reveal-top', {
+                origin: 'top',
+                delay: 150,
+                distance: '40px'
+            });
+
+            // Service blocks animation (both image and text inside)
+            ScrollReveal().reveal('.service-block.reveal-left', {
+                origin: 'left',
+                delay: 250,
+                distance: '80px',
+                opacity: 0
+            });
+            ScrollReveal().reveal('.service-block.reveal-right', {
+                origin: 'right',
+                delay: 250, // Sesuaikan delay agar seragam atau berbeza
+                distance: '80px',
+                opacity: 0
+            });
+
+            // CTA section animations
+            ScrollReveal().reveal('.cta-services .reveal-top', {
+                origin: 'top',
+                delay: 150,
+                distance: '50px',
+                opacity: 0
+            });
+            ScrollReveal().reveal('.cta-services .reveal-bottom', {
+                origin: 'bottom',
+                delay: 250,
+                distance: '50px',
+                opacity: 0
+            });
+            ScrollReveal().reveal('.cta-services .reveal-bottom-btn', {
+                origin: 'bottom',
+                delay: 350,
+                distance: '40px',
+                opacity: 0
+            });
+
+        } else {
+            console.warn("Pustaka ScrollReveal tidak dimuatkan. Animasi tidak akan berfungsi.");
+        }
+    </script>
+</body>
+</html>

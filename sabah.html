@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="stylesheet" href="destination.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">MehTravel</a>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="destination.html" class="dropbtn active">Destinations <span class="chevron">▾</span></a>
+                    <div class="dropdown-content">
+        <a href="pahang.html">Pulau Tioman</a>
+        <a href="terengganu.html">Pulau Redang</a>
+        <a href="perak.html">Pulau Pangkor</a>
+        <a href="sabah.html">Pulau Sipadan</a>
+        <a href="kedah.html">Pulau Tuba</a>
+      </div>
+    </div>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <div class="dropdown">
+      <a href="#" class="dropbtn">About<span class="chevron">&#9662;</span></a>
+      <div class="dropdown-content">
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+            <div class="nav-right">
+                <a href="tel:+60123456789" class="contact-number">
+                    <i class="fas fa-phone"></i> +6019-4881401
+                </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="island-description-section">
+            <h1>Interesting Destination in Sabah: Sipadan Island</h1>
+            <img src="images/13.jpg" alt="Pemandangan Megah Gunung Kinabalu">
+            <p>
+                Sipadan Island, located off the east coast of Sabah in the Celebes Sea, is Malaysia’s only oceanic island formed by living corals growing on an extinct volcanic cone. It is internationally renowned as one of the best diving spots in the world, praised for its crystal-clear waters, dramatic underwater drop-offs, and incredible marine biodiversity.
+            </p>
+            <p>
+                The island is a protected area with restricted visitor numbers, helping preserve its pristine ecosystem. This makes it a dream destination for nature lovers, scuba divers, and marine photographers.
+
+
+            </p>
+
+            <h2>Popular Activities on Sipadan Island:</h2>
+            <ul>
+                <li>Scuba Diving: Explore world-famous dive sites such as Barracuda Point, Turtle Cavern, and Drop Off Wall. You’ll encounter sea turtles, reef sharks, barracudas, and schools of vibrant fish.</li>
+                <li>Snorkeling: Although diving is the highlight, the shallow reefs also offer amazing snorkeling experiences with coral gardens and diverse marine life.</li>
+                <li>Underwater Photography: The rich biodiversity and clear visibility make Sipadan a paradise for underwater photography enthusiasts.</li>
+                <li>Island Viewing: While overnight stays are not allowed on Sipadan itself, nearby islands like Mabul or Kapalai provide stunning views and luxurious resorts.</li>
+            </ul>
+
+            <h2>Travel Preparation:</h2>
+            <p>
+               To visit Sipadan, you must obtain a diving permit, as daily visitors are limited to protect the marine environment. Most visitors stay on nearby islands such as Mabul Island or Kapalai, from where daily dive trips to Sipadan are arranged. The nearest airport is Tawau, followed by a road trip to Semporna and a boat ride to your island resort.
+
+
+            </p>
+            <p>
+                Whether you're an avid diver or someone who appreciates the wonders of the sea, Sipadan Island promises a world-class marine adventure that you’ll remember for a lifetime.
+            </p>
+        </section>
+
+        <section class="image-gallery-section">
+            <h2>Gallery of Sipadan Island</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide fade">
+                    <img src="images/14.jpg" alt="Puncak Gunung Kinabalu pada Waktu Subuh" loading="lazy">
+                    <div class="caption-text">Sipadan is nature’s masterpiece</div>
+                </div>
+
+                <div class="carousel-slide fade">
+                    <img src="gambar/pad.jpg" alt="Hutan Hujan di Taman Kinabalu" loading="lazy">
+                    <div class="caption-text">Beauty of Sipadan Island</div>
+                </div>
+
+                <div class="carousel-slide fade">
+                    <img src="images/15.jpg" alt="Poring Hot Spring Canopy Walk" loading="lazy">
+                    <div class="caption-text">Encircled by shimmering shades of turquoise and deep blue</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+
+            <br>
+
+            <div style="text-align:center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <section class="interactive-map-section">
+            <h2>SIPADAN ON MAPS</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.533912186417!2d118.62611657473532!3d4.114755695859037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x321534ffcf670e7d%3A0x55dd166135d28e89!2sSipadan%20Island!5e0!3m2!1sen!2smy!4v1752629060877!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 MehTravel. All rights reserved.</p>
+      <p>Email: amzarsafwan04@gmail.com | Tel: +6019-4881401</p>
+    </div>
+  </footer>
+    
+    <script>
+     
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+       
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("carousel-slide");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active-dot", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active-dot";
+        }
+
+        if (typeof ScrollReveal !== 'undefined') {
+            ScrollReveal({
+                distance: '70px',   
+                duration: 1100,      
+                easing: 'ease-out', 
+                origin: 'top',       
+                reset: false
+            });
+
+            ScrollReveal().reveal('.island-description-section h1', {
+                origin: 'left',      
+                distance: '50px',
+                delay: 200,
+                duration: 1300
+            });
+
+            ScrollReveal().reveal('.island-description-section img', {
+                delay: 400,
+                scale: 1,           
+                duration: 1300,
+                origin: 'bottom'    
+            });
+
+            ScrollReveal().reveal('.island-description-section p, .island-description-section h2', {
+                interval: 120,      
+                delay: 150,
+                origin: 'bottom',  
+                distance: '40px'
+            });
+
+            ScrollReveal().reveal('.island-description-section ul', {
+                delay: 700,
+                origin: 'right',   
+                distance: '40px'
+            });
+
+
+            ScrollReveal().reveal('.interactive-map-section h2', {
+                origin: 'top',
+                distance: '40px',
+                delay: 200
+            });
+            ScrollReveal().reveal('.map-container', {
+                delay: 400,
+                origin: 'left',     
+                distance: '80px',
+                scale: 0.98,
+                duration: 1300
+            });
+
+            ScrollReveal().reveal('.image-gallery-section h2', {
+                origin: 'top',
+                distance: '40px',
+                delay: 200
+            });
+            ScrollReveal().reveal('.carousel-container', {
+                delay: 400,
+                origin: 'right',   
+                distance: '80px',
+                duration: 1300
+            });
+
+            ScrollReveal().reveal('.main-footer', {
+                origin: 'bottom',
+                distance: '40px',
+                delay: 150
+            });
+
+        } else {
+            console.warn("Pustaka ScrollReveal tidak dimuatkan. Animasi tidak akan berfungsi.");
+        }
+    </script>
+</body>
+</html>

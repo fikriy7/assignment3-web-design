@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terengganu - Destinasi Impian Anda</title>
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="stylesheet" href="destination.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">MehTravel</a>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="destination.html" class="dropbtn active">Destinations <span class="chevron">▾</span></a>
+                    <div class="dropdown-content">
+        <a href="pahang.html">Pulau Tioman</a>
+        <a href="terengganu.html">Pulau Redang</a>
+        <a href="perak.html">Pulau Pangkor</a>
+        <a href="sabah.html">Pulau Sipadan</a>
+        <a href="kedah.html">Pulau Tuba</a>
+      </div>
+    </div>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <div class="dropdown">
+      <a href="#" class="dropbtn">About<span class="chevron">&#9662;</span></a>
+      <div class="dropdown-content">
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+            <div class="nav-right">
+                <a href="tel:+60123456789" class="contact-number">
+                    <i class="fas fa-phone"></i> +6019-4881401
+                </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="island-description-section">
+            <h1>Interesting Destination in Terengganu: Redang Island</h1>
+            <img src="images/2.jpg" alt="Pemandangan Pulau Redang yang Indah">
+            <p>
+                PRedang Island, located on the east coast of Terengganu, Malaysia, is one of the most renowned gems of the South China Sea. Known for its crystal-clear waters, stunning white sandy beaches, and coral reefs teeming with marine life, Redang is a paradise for divers and snorkeling enthusiasts. It is part of a protected marine park, ensuring its marine ecosystem remains well-preserved.
+            </p>
+            <p>
+                The island offers a luxurious holiday experience and is also ideal for families. The best time to visit is from March to October, when the weather is sunny and the sea is calm—perfect for unforgettable water activities.
+            </p>
+
+            <h2>Popular Activities on Redang Island:</h2>
+            <ul>
+                <li>Snorkeling and Diving: Explore various snorkeling and diving sites such as Turtle Bay, Black Coral Garden, and Long Beach. You may encounter turtles, stingrays, reef sharks, and vibrant coral reefs.</li>
+                <li>Island Hopping: Take a tour to nearby islands like Perhentian Island or Lang Tengah Island to discover more marine beauty and secluded beaches.</li>
+                <li>Jungle Trekking: Venture into the island’s tropical rainforest to observe native flora and fauna in their natural habitat.</li>
+                <li>Beach Relaxation: Enjoy stunning sunrises or sunsets at beaches like Pasir Panjang (Long Beach) or Teluk Kalong—perfect for a peaceful retreat.</li>
+                <li>Turtle Conservation: Visit a turtle conservation centre to learn about ongoing efforts to protect endangered sea turtles.</li>
+            </ul>
+
+            <h2>Travel Preparation:</h2>
+            <p>
+                Redang Island can be accessed by ferry from Merang Jetty or Shahbandar Jetty in Kuala Terengganu. Be sure to book your accommodation and ferry tickets in advance, especially during peak season.
+            </p>
+            <p>
+                Whether you're looking for an underwater adventure or simply wish to relax on a beautiful beach, Redang Island is sure to leave you with priceless memories.
+            </p>
+        </section>
+
+        <section class="image-gallery-section">
+            <h2>Gallery of Redang Island</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide fade">
+                    <img src="images/1.jpg" alt="interesting view" loading="lazy">
+                    <div class="caption-text">Breathtaking view of Redang Island</div>
+                </div>
+
+                <div class="carousel-slide fade">
+                    <img src="image/redang.jpg" alt="view redang" loading="lazy">
+                    <div class="caption-text">Where the sky meets the sea</div>
+                </div>
+
+                <div class="carousel-slide fade">
+                    <img src="images/3.jpg" alt="view atas Pulau Redang" loading="lazy">
+                    <div class="caption-text">Aerial view of Redang Island</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <br>
+
+            <div style="text-align:center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <section class="interactive-map-section">
+            <h2>REDANG ON MAPS</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127530.82520626353!2d102.94632128916016!3d5.807357000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b672728442a8b3%3A0x6e255767b43c8d32!2sRedang%20Island!5e0!3m2!1sen!2smy!4v1700000000000!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 MehTravel. All rights reserved.</p>
+      <p>Email: amzarsafwan04@gmail.com | Tel: +6019-4881401</p>
+    </div>
+  </footer>
+    
+    <script>
+      
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+       
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+       
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+      
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("carousel-slide");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active-dot", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active-dot";
+        }
+       
+        if (typeof ScrollReveal !== 'undefined') {
+            ScrollReveal({
+                distance: '60px',
+                duration: 1000,
+                easing: 'ease-out',
+                origin: 'bottom',
+                reset: false
+            });
+
+            ScrollReveal().reveal('.island-description-section h1', {
+                origin: 'top',
+                distance: '40px',
+                delay: 200,
+                duration: 1200
+            });
+
+            ScrollReveal().reveal('.island-description-section img', {
+                delay: 400,
+                scale: 0.95,
+                duration: 1200
+            });
+
+            ScrollReveal().reveal('.island-description-section p, .island-description-section h2', {
+                interval: 100,
+                delay: 100,
+                origin: 'left',
+                distance: '30px'
+            });
+
+            ScrollReveal().reveal('.island-description-section ul', {
+                delay: 600,
+                origin: 'bottom',
+                distance: '30px'
+            });
+
+            ScrollReveal().reveal('.image-gallery-section h2', {
+                origin: 'top',
+                distance: '40px',
+                delay: 200
+            });
+            ScrollReveal().reveal('.carousel-container', {
+                delay: 400,
+                origin: 'left',
+                distance: '80px',
+                duration: 1200
+            });
+
+            ScrollReveal().reveal('.interactive-map-section h2', {
+                origin: 'top',
+                distance: '40px',
+                delay: 200
+            });
+            ScrollReveal().reveal('.map-container', {
+                delay: 400,
+                origin: 'bottom',
+                distance: '60px',
+                scale: 0.95,
+                duration: 1200
+            });
+
+            ScrollReveal().reveal('.main-footer', {
+                origin: 'bottom',
+                distance: '30px',
+                delay: 100
+            });
+
+        } else {
+            console.warn("Pustaka ScrollReveal tidak dimuatkan. Animasi tidak akan berfungsi.");
+        }
+    </script>
+</body>
+</html>

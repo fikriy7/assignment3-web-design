@@ -1,0 +1,336 @@
+/* ========================================================== */
+/* === Story Content Section === */
+/* ========================================================== */
+.story-content-section {
+    padding: 100px 20px 80px; /* Padding atas lebih besar selepas buang hero */
+    max-width: 1200px; /* Lebar keseluruhan section */
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f8fcfc; /* Latar belakang lembut */
+}
+
+/* --- Story Intro - Who We Are (Image & Text Side-by-Side) --- */
+.story-intro-container {
+    display: flex;
+    align-items: center; /* Memusatkan secara vertikal */
+    gap: 60px; /* Jarak antara gambar dan teks */
+    margin-bottom: 80px;
+    text-align: left; /* Teks dalam container ini align kiri */
+}
+
+.story-image-left {
+    flex: 1;
+    min-width: 400px; /* Saiz minimum untuk gambar */
+}
+
+.story-image-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+.story-intro-text {
+    flex: 1.2; /* Teks mengambil sedikit lebih banyak ruang */
+}
+
+.story-intro-text .section-subtitle {
+    font-size: 1.1em;
+    color: #666; /* Warna kelabu lembut */
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-intro-text .section-title-alt { /* Nama kelas baru untuk tajuk utama */
+    font-size: 3em;
+    color: #333; /* Warna lebih gelap untuk tajuk utama */
+    margin-bottom: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.story-intro-text p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.story-intro-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/* --- Section Title Umum (untuk "Tonggak Utama" dan "Visi & Misi") --- */
+.section-title { /* Ini untuk Tonggak Utama Kami */
+    font-size: 2.8em;
+    color: #008080; /* Warna teal */
+    margin-bottom: 60px;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #008080;
+    border-radius: 2px;
+}
+
+/* --- Milestones Section --- */
+.story-milestones {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.story-milestones h3, .story-vision h3 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.story-milestones h3::after, .story-vision h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #008080;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.milestone-item {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin: 0 auto 30px auto;
+    max-width: 700px;
+    text-align: left;
+    border-left: 5px solid #008080;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.milestone-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.milestone-item h4 {
+    font-size: 1.8em;
+    color: #008080;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.milestone-item p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- Vision Section --- */
+.story-vision {
+    margin-top: 80px;
+}
+
+.vision-points {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.vision-item {
+    flex: 1;
+    min-width: 300px;
+    background-color: #e0f2f2;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0, 128, 128, 0.15);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 128, 128, 0.2);
+}
+
+.vision-item h4 {
+    font-size: 1.6em;
+    color: #006666;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.vision-item p, .vision-item ul {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.6;
+}
+
+.vision-item ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+.vision-item ul li {
+    margin-bottom: 8px;
+}
+
+/* ========================================================== */
+/* === Responsive Adjustments === */
+/* ========================================================== */
+@media (max-width: 992px) {
+    .story-content-section {
+        padding: 80px 15px 60px; /* Sesuaikan padding */
+    }
+    .story-intro-container {
+        flex-direction: column; /* Bertukar kepada susunan menegak */
+        gap: 40px;
+        text-align: center; /* Teks di tengah pada mobile */
+    }
+    .story-image-left {
+        min-width: unset; /* Buang min-width */
+        max-width: 80%; /* Hadkan lebar gambar */
+        margin: 0 auto; /* Tengah gambar */
+    }
+    .story-intro-text {
+        padding: 0 10px;
+    }
+    .story-intro-text .section-title-alt {
+        font-size: 2.5em;
+        margin-top: 20px; /* Beri ruang dari gambar */
+    }
+    .story-intro-text p {
+        font-size: 1em;
+    }
+    .section-title {
+        font-size: 2.5em;
+        margin-bottom: 50px;
+    }
+    .story-milestones h3, .story-vision h3 {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+    .milestone-item {
+        padding: 25px;
+    }
+    .milestone-item h4 {
+        font-size: 1.6em;
+    }
+    .milestone-item p {
+        font-size: 0.95em;
+    }
+    .vision-points {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .vision-item {
+        min-width: unset;
+        padding: 25px;
+    }
+    .vision-item h4 {
+        font-size: 1.5em;
+    }
+    .vision-item p, .vision-item ul {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 768px) {
+    .story-content-section {
+        padding: 60px 15px 40px;
+    }
+    .story-intro-container {
+        gap: 30px;
+    }
+    .story-image-left {
+        max-width: 90%;
+    }
+    .story-intro-text .section-title-alt {
+        font-size: 2em;
+    }
+    .story-intro-text .section-subtitle {
+        font-size: 1em;
+    }
+    .story-intro-text p {
+        font-size: 0.95em;
+    }
+    .section-title {
+        font-size: 2.2em;
+        margin-bottom: 40px;
+    }
+    .section-title::after {
+        width: 60px;
+        height: 3px;
+        bottom: -10px;
+    }
+    .story-milestones h3, .story-vision h3 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .milestone-item {
+        padding: 20px;
+    }
+    .milestone-item h4 {
+        font-size: 1.4em;
+    }
+    .vision-item h4 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-content-section {
+        padding: 40px 10px 30px;
+    }
+    .story-intro-container {
+        gap: 20px;
+    }
+    .story-image-left {
+        max-width: 100%;
+    }
+    .story-intro-text .section-title-alt {
+        font-size: 1.8em;
+    }
+    .story-intro-text .section-subtitle {
+        font-size: 0.9em;
+    }
+    .story-intro-text p {
+        font-size: 0.9em;
+    }
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .milestone-item {
+        padding: 15px;
+    }
+    .milestone-item h4 {
+        font-size: 1.2em;
+    }
+    .milestone-item p {
+        font-size: 0.9em;
+    }
+    .vision-item {
+        padding: 20px;
+    }
+    .vision-item h4 {
+        font-size: 1.2em;
+    }
+    .vision-item p, .vision-item ul {
+        font-size: 0.9em;
+    }
+}

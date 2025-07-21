@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kisah Kami - MehTravel</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="story.css" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">MehTravel</a>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="destination.html" class="dropbtn">Destinations <span class="chevron">▾</span></a>
+                    <div class="dropdown-content">
+                        <a href="pahang.html">Pulau Tioman</a>
+                        <a href="terengganu.html">Pulau Redang</a>
+                        <a href="perak.html">Pulau Pangkor</a>
+                        <a href="sabah.html">Pulau Sipadan</a>
+                        <a href="kedah.html">Pulau Tuba</a>
+                    </div>
+                </div>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn active">About<span class="chevron">&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="story.html" class="active">Our Story</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a href="tel:+6019-4881401" class="contact-number">
+                    <i class="fas fa-phone"></i> +6019-4881401
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="story-content-section">
+            <div class="story-intro-container">
+                <div class="story-image-left reveal-left">
+                    <img src="images/office.jpg" alt="Bangunan Pejabat MehTravel">
+                </div>
+                <div class="story-intro-text">
+                    <p class="section-subtitle reveal-right">Our History</p>
+                    <h2 class="section-title-alt reveal-right">Who we are</h2>
+                    <p class="reveal-right">
+                        Welcome to Mehtravel – more than just a travel agency, we're a promise to transport you into a world of breathtaking natural beauty and captivating culture across Malaysia's most celebrated islands.
+                    </p>
+                    <p class="reveal-right">
+                        Established in 2025, Mehtravel was born from a deep love for every sea breeze, every stretch of pristine white sand and every stunning sunrise that graces our nation's archipelago.
+                    </p>
+                    <p class="reveal-right">
+                        We believe that each island possesses its own unique spirit, waiting to be explored and experienced and our mission is to be the bridge between you and those unforgettable moments.
+                    </p>
+                </div>
+            </div>
+
+            <div class="story-milestones">
+                <h3 class="reveal-top">Let's Choose Us</h3>
+                <div class="milestone-item reveal-left">
+                    <h4>Island Specialists</h4>
+                    <p>Our dedicated focus on island destinations makes us true experts in curating the best tropical getaways.</p>
+                </div>
+                <div class="milestone-item reveal-right">
+                    <h4>Stress-Free Planning</h4>
+                    <p>From transportation to activities, we handle every detail, so you can unwind and enjoy your trip to the fullest.</p>
+                </div>
+                <div class="milestone-item reveal-left">
+                    <h4>Expert Local Guides</h4>
+                    <p>Explore with confidence, guided by passionate locals who know the islands inside out.</p>
+                </div>    
+                <div class="milestone-item reveal-right">
+                    <h4>Your Dream, Our Mission</h4>
+                    <p>We’re here to turn your island vacation dreams into unforgettable, picture-perfect realities.</p>
+                </div>
+            </div>
+
+            <div class="story-vision">
+                <h3 class="reveal-top">Our Vision and Mision</h3>
+                <div class="vision-points">
+                    <div class="vision-item reveal-bottom">
+                        <h4>Vision</h4>
+                        <p>To become the leading choice in travel services, recognized for excellence, innovation and a strong commitment to delivering exceptional customer experiences.</p>
+                    </div>
+                    <div class="vision-item reveal-bottom">
+                        <h4>Mision</h4>
+                        <ul>
+                            <li>To provide a wide range of high-quality travel packages.</li>
+                            <li>To ensure smooth, safe and meaningful travel experiences.</li>
+                            <li>To promote sustainable and responsible tourism.</li>
+                            <li>To build strong and lasting relationships with our customers.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2025 MehTravel. All rights reserved.</p>
+            <p>Email: amzarsafwan04@gmail.com | Tel: +6019-4881401</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Logik untuk menetapkan kelas 'active' pada link navigasi
+            const currentPath = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.main-nav .nav-center a');
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (linkPath && linkPath.includes(currentPath) && currentPath !== "") {
+                    link.classList.add('active');
+                } else if (link.parentElement.classList.contains('dropdown') && (currentPath === 'story.html' || currentPath === 'contact.html' || currentPath === 'about.html')) {
+                    const dropbtn = link.closest('.dropdown') ? link.closest('.dropdown').querySelector('.dropbtn') : null;
+                    if (dropbtn) {
+                        dropbtn.classList.add('active');
+                    }
+                }
+            });
+
+            const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+            dropdownLinks.forEach(link => {
+                const linkPath = new URL(link.href).pathname.split('/').pop();
+                if (currentPath === linkPath) {
+                    link.classList.add('active');
+                    const parentDropdown = link.closest('.dropdown');
+                    if (parentDropdown) {
+                        const dropbtn = parentDropdown.querySelector('.dropbtn');
+                        if (dropbtn) {
+                            dropbtn.classList.add('active');
+                        }
+                    }
+                }
+            });
+            
+            // ScrollReveal initializations
+            if (typeof ScrollReveal !== 'undefined') {
+                ScrollReveal({
+                    distance: '60px', 
+                    duration: 1000,  
+                    easing: 'ease-out',
+                    reset: false
+                });
+
+                // Story Intro (gambar dan teks)
+                ScrollReveal().reveal('.story-image-left.reveal-left', {
+                    origin: 'left',
+                    delay: 200,
+                    distance: '60px',
+                    opacity: 0
+                });
+
+                // Animasi untuk teks sebelah kanan (subtitle, title, paragraphs)
+                ScrollReveal().reveal('.story-intro-text .section-subtitle.reveal-right', {
+                    origin: 'right',
+                    delay: 300, 
+                    distance: '50px',
+                    opacity: 0
+                });
+                ScrollReveal().reveal('.story-intro-text .section-title-alt.reveal-right', {
+                    origin: 'right',
+                    delay: 400, 
+                    distance: '50px',
+                    opacity: 0
+                });
+                ScrollReveal().reveal('.story-intro-text p.reveal-right', {
+                    origin: 'right',
+                    delay: 500, 
+                    interval: 100, 
+                    distance: '50px',
+                    opacity: 0
+                });
+
+                // Milestones & Vision (kod yang sedia ada)
+                ScrollReveal().reveal('.story-milestones h3.reveal-top, .story-vision h3.reveal-top', {
+                    origin: 'top',
+                    delay: 150,
+                    distance: '40px'
+                });
+                ScrollReveal().reveal('.milestone-item.reveal-left', {
+                    origin: 'left',
+                    delay: 200,
+                    interval: 100,
+                    distance: '60px',
+                    opacity: 0
+                });
+                ScrollReveal().reveal('.milestone-item.reveal-right', {
+                    origin: 'right',
+                    delay: 200,
+                    interval: 100,
+                    distance: '60px',
+                    opacity: 0
+                });
+                 ScrollReveal().reveal('.vision-item.reveal-bottom', {
+                    origin: 'bottom',
+                    delay: 200,
+                    interval: 150,
+                    distance: '50px',
+                    opacity: 0
+                });
+
+            } else {
+                console.warn("Pustaka ScrollReveal tidak dimuatkan. Animasi tidak akan berfungsi.");
+            }
+        });
+    </script>
+</body>
+</html>
