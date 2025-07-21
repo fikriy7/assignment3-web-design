@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hubungi Kami - MehTravel</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">MehTravel</a>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="destination.html" class="dropbtn">Destinations <span class="chevron">▾</span></a>
+                    <div class="dropdown-content">
+                        <a href="pahang.html">Pulau Tioman</a>
+                        <a href="terengganu.html">Pulau Redang</a>
+                        <a href="perak.html">Pulau Pangkor</a>
+                        <a href="sabah.html">Pulau Sipadan</a>
+                        <a href="kedah.html">Pulau Tuba</a>
+                    </div>
+                </div>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn active">About<span class="chevron">▾</span></a>
+                    <div class="dropdown-content">
+                        <a href="story.html">Our Story</a>
+                        <a href="contact.html" class="active">Contact Us</a> </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a href="tel:+6019-4881401" class="contact-number">
+                    <i class="fas fa-phone"></i> +6019-4881401
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info-section-top-padding"> <div class="contact-container-single">
+                <div class="contact-details">
+                    <h2 class="reveal-top">Get In Touch</h2>
+                    <div class="info-item reveal-left">
+                        <div class="icon-wrapper"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text-wrapper">
+                            <h3>Address:</h3>
+                            <p>Wisma MehTravel,<br> 7, Kampung Baharu, 02100 Padang Besar, Perlis</p> </div>
+                    </div>
+                    <div class="info-item reveal-right">
+                        <div class="icon-wrapper"><i class="fas fa-phone-alt"></i></div>
+                        <div class="text-wrapper">
+                            <h3>Office:</h3>
+                            <p>+6017-252 3173</p> </div>
+                    </div>
+                    <div class="info-item reveal-left">
+                        <div class="icon-wrapper"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="text-wrapper">
+                            <h3>Tours:</h3>
+                            <p>+6019-488 1401</p> </div>
+                    </div>
+                    <div class="info-item reveal-right">
+                        <div class="icon-wrapper"><i class="fas fa-ticket-alt"></i></div>
+                        <div class="text-wrapper">
+                            <h3>Ticketing:</h3>
+                            <p>+6019-488 1401</p> </div>
+                    </div>
+                    <div class="info-item reveal-left">
+                        <div class="icon-wrapper"><i class="fas fa-clock"></i></div>
+                        <div class="text-wrapper">
+                            <h3>Business Hours:</h3>
+                            <p>Monday - Friday (9am to 6pm)</p>
+                            <p>Saturday-Sunday & Public Holidays: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2 class="reveal-top">Lokasi Kami</h2>
+            <div class="map-container reveal-bottom">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.9827430566097!2d100.25413157475444!3d6.649060193345621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ceaa9676080f1%3A0xb60d31264ae5b2ca!2sUniCiti%20Alam%20UniMAP!5e0!3m2!1sen!2smy!4v1753051571331!5m2!1sen!2smy" width="1300" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <p>© 2025 MehTravel. All rights reserved.</p>
+            <p>Email: amzarsafwan04@gmail.com | Tel: +6019-4881401</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Logik untuk menetapkan kelas 'active' pada link navigasi
+            const currentPath = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.main-nav .nav-center a');
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (linkPath && linkPath.includes(currentPath) && currentPath !== "") {
+                    link.classList.add('active');
+                } else if (link.parentElement.classList.contains('dropdown') && (currentPath === 'story.html' || currentPath === 'contact.html' || currentPath === 'about.html')) {
+                    const dropbtn = link.closest('.dropdown') ? link.closest('.dropdown').querySelector('.dropbtn') : null;
+                    if (dropbtn) {
+                        dropbtn.classList.add('active');
+                    }
+                }
+            });
+
+            const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+            dropdownLinks.forEach(link => {
+                const linkPath = new URL(link.href).pathname.split('/').pop();
+                if (currentPath === linkPath) {
+                    link.classList.add('active');
+                    const parentDropdown = link.closest('.dropdown');
+                    if (parentDropdown) {
+                        const dropbtn = parentDropdown.querySelector('.dropbtn');
+                        if (dropbtn) {
+                            dropbtn.classList.add('active');
+                        }
+                    }
+                }
+            });
+            
+            // ScrollReveal initializations
+            if (typeof ScrollReveal !== 'undefined') {
+                ScrollReveal({
+                    distance: '60px', 
+                    duration: 1000,  
+                    easing: 'ease-out',
+                    reset: false
+                });
+
+                // Animasi untuk hero section telah dibuang
+
+                ScrollReveal().reveal('.contact-info-section-top-padding h2.reveal-top, .map-section h2.reveal-top', { // Mengubah selector
+                    origin: 'top',
+                    delay: 150,
+                    distance: '40px'
+                });
+
+                ScrollReveal().reveal('.contact-details .info-item.reveal-left', {
+                    origin: 'left',
+                    delay: 200,
+                    interval: 100,
+                    distance: '60px',
+                    opacity: 0
+                });
+                ScrollReveal().reveal('.contact-details .info-item.reveal-right', {
+                    origin: 'right',
+                    delay: 200,
+                    interval: 100,
+                    distance: '60px',
+                    opacity: 0
+                });
+                
+                ScrollReveal().reveal('.map-container.reveal-bottom', {
+                    origin: 'bottom',
+                    delay: 200,
+                    distance: '50px',
+                    opacity: 0
+                });
+
+            } else {
+                console.warn("Pustaka ScrollReveal tidak dimuatkan. Animasi tidak akan berfungsi.");
+            }
+        });
+    </script>
+</body>
+</html>

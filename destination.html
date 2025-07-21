@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MehTravel - Destinations</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="destination.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">MehTravel</a>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="destination.html" class="dropbtn active">Destinations <span class="chevron">&#9662;</span></a>
+                    <div class="dropdown-content">
+        <a href="pahang.html">Pulau Tioman</a>
+        <a href="terengganu.html">Pulau Redang</a>
+        <a href="perak.html">Pulau Pangkor</a>
+        <a href="sabah.html">Pulau Sipadan</a>
+        <a href="kedah.html">Pulau Tuba</a>
+      </div>
+    </div>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <div class="dropdown">
+      <a href="#" class="dropbtn">About<span class="chevron">&#9662;</span></a>
+      <div class="dropdown-content">
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+            <div class="nav-right">
+                <a href="tel:+60123456789" class="contact-number">
+                    <i class="fas fa-phone"></i> +6019-4881401
+                </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="destination-hero">
+    <video autoplay muted loop playsinline class="hero-video-background">
+        <source src="video/des.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="destination-hero::before"></div> 
+    <div class="destination-hero::after"></div> 
+
+    <div class="hero-content">
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; Destination
+        </div>
+        <h2>WELCOME, LET'S SEE</h2>
+    </div>
+
+    </section>
+    </header>
+
+    <main>
+        
+        <section class="section">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="pulau">ISLANDS</button>
+            </div>
+
+            <div id="pulau-content" class="tab-content active">
+                <h3 id="pulau-pulau-tab">FAMOUS ISLANDS</h3>
+                <div class="card-grid">
+                    <div class="card" id="langkawi-card" data-category="pulau">
+                        <img src="images/1.jpg" alt="Langkawi" />
+                        <div class="card-content">
+                            <h3>PULAU REDANG, TERENGGANU</h3>
+                            <p>Discover the beauty of Langkawi's pristine beaches and lush rainforests.</p>
+                            <a href="terengganu.html" class="btn-discover">Discover</a>
+                        </div>
+                    </div>
+                    <div class="card" id="redang-card" data-category="pulau">
+                        <img src="images/11.jpg" alt="Pulau Redang" />
+                        <div class="card-content">
+                            <h3>PULAU PANGKOR, PERAK</h3>
+                            <p>Dive into crystal clear waters and explore vibrant marine life.</p>
+                            <a href="perak.html" class="btn-discover">Discover</a>
+                        </div>
+                    </div>
+                    <div class="card" data-category="pulau">
+                        <img src="images/15.jpg" alt="Pulau Perhentian" />
+                        <div class="card-content">
+                            <h3>PULAU SIPADAN, SABAH</h3>
+                            <p>Snorkelling and diving in the paradise of Terengganu.</p>
+                            <a href="sabah.html" class="btn-discover">Discover</a>
+                        </div>
+                    </div>
+                    <div class="card" data-category="pulau">
+                        <img src="image/tio.jpg" alt="Pulau Tioman" />
+                        <div class="card-content">
+                            <h3>PULAU TIOMAN, PAHANG</h3>
+                            <p>A beautiful island in Pahang known for its pristine beaches and lush tropical rainforest.</p>
+                            <a href="pahang.html" class="btn-discover">Discover</a>
+                        </div>
+                    </div>
+                    <div class="card" data-category="pulau">
+                        <img src="image/tuba.jpg" alt="Pulau Sipadan" />
+                        <div class="card-content">
+                            <h3>PULAU TUBA, KEDAH</h3>
+                            <p>A tranquil island near Langkawi, offering views of traditional village life and untouched natural surroundings.</p>
+                            <a href="kedah.html" class="btn-discover">Discover</a>
+                        </div>
+                    </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 MehTravel. All rights reserved.</p>
+      <p>Email: amzarsafwan04@gmail.com | Tel: +6019-4881401</p>
+    </div>
+  </footer>
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPath = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.main-nav .nav-center a');
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (linkPath && linkPath.includes(currentPath)) {
+                    link.classList.add('active');
+                } else if (link.parentElement.classList.contains('dropdown') && currentPath === 'destination.html') {
+                    link.classList.add('active');
+                }
+            });
+
+            const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+            dropdownLinks.forEach(link => {
+                const linkPath = new URL(link.href).pathname.split('/').pop();
+                if (currentPath === linkPath) {
+                    link.classList.add('active'); 
+
+                    const parentDropdown = link.closest('.dropdown');
+                    if (parentDropdown) {
+                        const dropbtn = parentDropdown.querySelector('.dropbtn');
+                        if (dropbtn) {
+                            dropbtn.classList.add('active');
+                        }
+                    }
+                }
+            });
+
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('active');
+
+                    const targetTabId = button.dataset.tab + '-content';
+                    document.getElementById(targetTabId).classList.add('active');
+
+                
+                    if (typeof ScrollReveal !== 'undefined') { 
+                        ScrollReveal().clean('.card'); 
+                        ScrollReveal().reveal('.card:visible', { 
+                            distance: '50px',
+                            origin: 'bottom',
+                            interval: 150, 
+                            duration: 1200, 
+                            reset: false
+                        });
+                    }
+                });
+            });
+
+            const categoryCards = document.querySelectorAll('.category-card');
+            const allDestinationCards = document.querySelectorAll('.card');
+
+            categoryCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const filter = card.dataset.filter;
+
+                    categoryCards.forEach(c => c.classList.remove('active'));
+                    card.classList.add('active');
+
+                    let targetTab = '';
+                    if (filter === 'pulau') {
+                        targetTab = 'pulau';
+                    } else if (filter === 'negeri') {
+                        targetTab = 'negeri';
+                    } else { 
+                        targetTab = 'pulau'; 
+                    }
+
+                    tabButtons.forEach(btn => {
+                        if (btn.dataset.tab === targetTab) {
+                            btn.click(); 
+                        }
+                    });
+
+                    setTimeout(() => {
+                        allDestinationCards.forEach(dCard => {
+                            if (filter === 'all' || dCard.dataset.category === filter) {
+                                dCard.style.display = 'flex'; 
+                            } else {
+                                dCard.style.display = 'none';
+                            }
+                        });
+                        
+                        if (typeof ScrollReveal !== 'undefined') {
+                            ScrollReveal().clean('.card');
+                            ScrollReveal().reveal('.card:visible', { 
+                                distance: '50px',
+                                origin: 'bottom',
+                                interval: 150, 
+                                duration: 1200, 
+                                reset: false
+                            });
+                        }
+                    }, 10); 
+                });
+            });
+
+            const initialCategoryCard = document.querySelector('.category-card[data-filter="all"]');
+            if (initialCategoryCard) {
+                initialCategoryCard.click();
+            } else {
+                if (tabButtons.length > 0) {
+                    tabButtons[0].click();
+                }
+            }
+
+
+            
+            if (typeof ScrollReveal !== 'undefined') {
+                // Default global settings for ScrollReveal if needed (optional)
+                // ScrollReveal({ distance: '60px', duration: 1000, easing: 'ease-out', reset: false });
+
+                ScrollReveal().reveal('.destination-hero', {
+                    distance: '50px',
+                    origin: 'top',
+                    duration: 1000,
+                    easing: 'ease-in-out',
+                    reset: false
+                });
+
+                ScrollReveal().reveal('.section-title-alt', {
+                    distance: '20px',
+                    origin: 'top',
+                    duration: 800,
+                    delay: 200,
+                    reset: false
+                });
+
+                ScrollReveal().reveal('.category-card', {
+                    distance: '30px',
+                    origin: 'bottom',
+                    interval: 150, 
+                    duration: 700,
+                    reset: false
+                });
+
+                ScrollReveal().reveal('.tabs', {
+                    distance: '20px',
+                    origin: 'top',
+                    duration: 700,
+                    delay: 300,
+                    reset: false
+                });
+
+                // Ini adalah ANIMASI UTAMA untuk kad-kad (berlaku apabila halaman dimuat)
+                // Settings ini akan digunakan apabila tab pertama kali dibuka atau jika kategori disaring.
+                ScrollReveal().reveal('.card', {
+                    distance: '50px',       // Jarak pergerakan elemen
+                    origin: 'bottom',       // Asal kemunculan (dari bawah)
+                    opacity: 0,             // Bermula dengan tidak kelihatan
+                    duration: 1200,         // <--- TINGKATKAN INI untuk animasi fade-in yang lebih lambat
+                    delay: 100,             // Mula sedikit lewat
+                    interval: 150,          // <--- TINGKATKAN INI untuk muncul satu persatu dengan lebih perlahan
+                    easing: 'ease-in-out',  // Jenis kelajuan animasi
+                    reset: false            // Hanya animasi sekali (tidak berulang apabila scroll ke atas)
+                });
+            }
+        });
+    </script>
+</body>
+</html>

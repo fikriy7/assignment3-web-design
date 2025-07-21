@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MehTravel - Explore the World</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+
+<nav class="main-nav">
+  <div class="nav-left">
+    <a href="index.html" class="logo">MehTravel</a>
+  </div>
+
+  <div class="nav-center">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="destination.html" class="dropbtn">Destinations <span class="chevron">&#9662;</span></a>
+      <div class="dropdown-content">
+        <a href="pahang.html">Pulau Tioman</a>
+        <a href="terengganu.html">Pulau Redang</a>
+        <a href="perak.html">Pulau Pangkor</a>
+        <a href="sabah.html">Pulau Sipadan</a>
+        <a href="kedah.html">Pulau Tuba</a>
+      </div>
+    </div>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <div class="dropdown">
+    <a href="#" class="dropbtn">About<span class="chevron">&#9662;</span></a> <div class="dropdown-content">
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <a href="tel:+60123456789" class="contact-number">
+      <i class="fas fa-phone"></i> +6019-4881401
+    </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+</nav>
+ 
+    <div class="hero fade-in hero-slider">
+      <div class="hero-text">
+        <h1 id="hero-title" class="fade-text">Welcome to Langkawi</h1>
+        <p id="hero-desc" class="fade-text">Explore Langkawi's beautiful beaches and sunsets</p>
+      </div>
+      <div class="hero-controls">
+        <button class="hero-btn active" data-index="0"></button>
+        <button class="hero-btn" data-index="1"></button>
+        <button class="hero-btn" data-index="2"></button>
+        <button class="hero-btn" data-index="3"></button>
+      </div>
+    </div>
+  </header>
+
+  <section id="whyus" class="section light">
+    <h2>Why Choose MehTravel?</h2>
+    <ul class="features">
+      <li>✔ Expert tour guides</li>
+      <li>✔ Personal & Unique Travel Experience</li>
+      <li>✔ Trusted since 2025</li>
+    </ul>
+  </section>
+  
+  <footer id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 MehTravel. All rights reserved.</p>
+      <p>Email: amzarsafwan04@gmail.com | Tel: +6019-4881401</p>
+    </div>
+  </footer>
+
+  <script>
+    const hero = document.querySelector('.hero-slider');
+    const heroTitle = document.getElementById('hero-title');
+    const heroDesc = document.getElementById('hero-desc');
+    const heroButtons = document.querySelectorAll('.hero-btn');
+
+    const slides = [
+      {
+        image: 'images/1.jpg',
+        title: 'Welcome to Pulau Pangkor',
+        desc: "Scenic Views of Pangkor Island"
+      },
+      {
+        image: 'images/2.jpg',
+        title: 'Relax in Pulau Tioman',
+        desc: 'Experience true serenity on Tioman Island'
+      },
+      {
+        image: 'images/3.jpg',
+        title: 'Dive into Pulau Redang',
+        desc: 'Crystal clear water and coral paradise await you'
+      },
+      {
+        image: 'images/4.jpg',
+        title: 'Explore Pulau Sipadan',
+        desc: 'A Hidden Gem of the Celebes Sea'
+      }
+    ];
+
+    let current = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      heroTitle.classList.add('hidden');
+      heroDesc.classList.add('hidden');
+      heroButtons.forEach(btn => btn.classList.remove('active'));
+
+      setTimeout(() => {
+        const { image, title, desc } = slides[index];
+        hero.style.backgroundImage = `url('${image}')`;
+        heroTitle.textContent = title;
+        heroDesc.textContent = desc;
+
+        heroTitle.classList.remove('hidden');
+        heroDesc.classList.remove('hidden');
+        heroButtons[index].classList.add('active');
+
+        current = index;
+      }, 300);
+    }
+
+    function nextSlide() {
+      const nextIndex = (current + 1) % slides.length;
+      showSlide(nextIndex);
+    }
+
+    heroButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const index = parseInt(button.getAttribute('data-index'));
+        showSlide(index);
+        resetAutoSlide();
+      });
+    });
+
+    function startAutoSlide() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(slideInterval);
+      startAutoSlide();
+    }
+
+    showSlide(current);
+    startAutoSlide();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname; // Dapatkan laluan URL semasa (cth: /services.html)
+        const navLinks = document.querySelectorAll('.main-nav .nav-center a'); // Pilih semua link navigasi utama
+
+        navLinks.forEach(link => {
+            // Dapatkan href link dan pastikan ia relatif terhadap root (tanpa domain)
+            const linkPath = new URL(link.href).pathname;
+
+            // Pastikan kedua-dua laluan berakhir dengan '/' atau nama fail
+            // Untuk index.html, mungkin hanya '/' atau 'index.html'
+            if (currentPath === linkPath || 
+                (currentPath === '/' && linkPath.endsWith('/index.html')) ||
+                (currentPath.endsWith('.html') && currentPath.includes(linkPath.split('/').pop()))
+            ) {
+                link.classList.add('active'); // Tambah kelas 'active'
+            } else {
+                link.classList.remove('active'); // Buang kelas 'active' jika tidak sepadan
+            }
+        });
+
+        // Logik untuk dropdown (jika ada)
+        const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+        dropdownLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
+            if (currentPath === linkPath || 
+                (currentPath.endsWith('.html') && currentPath.includes(linkPath.split('/').pop()))) {
+                link.classList.add('active'); // Tandakan item dropdown sebagai aktif
+
+                // Jika item dropdown aktif, tandakan juga parent dropdown button sebagai aktif
+                const parentDropdown = link.closest('.dropdown');
+                if (parentDropdown) {
+                    const dropbtn = parentDropdown.querySelector('.dropbtn');
+                    if (dropbtn) {
+                        dropbtn.classList.add('active');
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

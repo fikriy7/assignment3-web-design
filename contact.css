@@ -1,0 +1,238 @@
+/* ========================================================== */
+/* === Hero Section (Contact Page Specific) - Rules dibuang === */
+/* .contact-hero-section { ... } */
+/* .contact-hero-section .hero-content { ... } */
+/* .contact-hero-section .hero-content h1 { ... } */
+/* .contact-hero-section .hero-content p { ... } */
+/* .contact-hero-section .hero-wave-bottom { ... } */
+
+
+/* ========================================================== */
+/* === Contact Information Section === */
+/* ========================================================== */
+.contact-info-section-top-padding { /* Nama kelas baru */
+    padding: 120px 20px 80px; /* Tambah padding atas untuk mengganti ruang hero section */
+    background-color: #f8fcfc;
+    position: relative;
+    /* z-index: 3; (Tidak perlu lagi kerana tiada hero wave) */
+}
+
+/* KONTENA UNTUK 1 LAJUR */
+.contact-container-single {
+    max-width: 800px; /* Lebar maksimum untuk satu lajur */
+    margin: 0 auto;
+    display: flex; /* Gunakan flex untuk menengahkan div contact-details */
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Untuk responsif jika diperlukan */
+}
+
+.contact-details {
+    flex: none; /* Buang flex growth */
+    width: 100%; /* Lebar penuh dalam kontena baru */
+    max-width: 700px; /* Lebar maksimum untuk contact-details */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    text-align: left;
+}
+
+.contact-details h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+
+.contact-details h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #008080;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+
+.info-item {
+    display: flex;
+    align-items: flex-start; /* Jajar ikon dan teks ke atas */
+    margin-bottom: 30px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item .icon-wrapper {
+    background-color: #008080; /* Warna latar belakang ikon */
+    color: #fff;
+    border-radius: 50%; /* Bulat */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-right: 20px;
+    flex-shrink: 0; /* Pastikan ikon tidak mengecil */
+}
+
+.info-item .text-wrapper h3 {
+    font-size: 1.4em;
+    color: #008080;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.info-item .text-wrapper p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* ========================================================== */
+/* === Google Map Section (Optional) === */
+/* ========================================================== */
+.map-section {
+    padding: 80px 20px;
+    background-color: #f0fafa;
+    text-align: center;
+}
+
+.map-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.map-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #008080;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden; /* Penting untuk border-radius pada iframe */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    border-radius: 15px; /* Duplikat untuk memastikan iframe bulat */
+}
+
+
+/* ========================================================== */
+/* === Responsive Adjustments === */
+/* ========================================================== */
+@media (max-width: 992px) {
+    /* Hero section rules dibuang */
+
+    .contact-info-section-top-padding { /* Kelas baru */
+        padding: 100px 15px 60px; /* Sesuaikan padding atas */
+    }
+    .contact-container-single {
+        padding: 0 15px;
+    }
+    .contact-details {
+        max-width: 100%;
+        padding: 30px;
+    }
+    .contact-details h2, .map-section h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .info-item .icon-wrapper {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3em;
+        margin-right: 15px;
+    }
+    .info-item .text-wrapper h3 {
+        font-size: 1.3em;
+    }
+    .info-item .text-wrapper p {
+        font-size: 0.95em;
+    }
+    .map-section {
+        padding: 60px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero section rules dibuang */
+
+    .contact-info-section-top-padding { /* Kelas baru */
+        padding: 80px 15px 40px; /* Sesuaikan padding atas */
+    }
+    .contact-details {
+        padding: 25px;
+    }
+    .contact-details h2, .map-section h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .info-item {
+        margin-bottom: 25px;
+    }
+    .info-item .icon-wrapper {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+        margin-right: 12px;
+    }
+    .info-item .text-wrapper h3 {
+        font-size: 1.2em;
+    }
+    .map-section {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero section rules dibuang */
+
+    .contact-info-section-top-padding { /* Kelas baru */
+        padding: 60px 10px 30px; /* Sesuaikan padding atas */
+    }
+    .contact-details {
+        padding: 20px;
+    }
+    .contact-details h2, .map-section h2 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+    .info-item {
+        margin-bottom: 20px;
+    }
+    .info-item .icon-wrapper {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+        margin-right: 10px;
+    }
+    .info-item .text-wrapper h3 {
+        font-size: 1.1em;
+    }
+    .info-item .text-wrapper p {
+        font-size: 0.85em;
+    }
+    .map-section {
+        padding: 30px 10px;
+    }
+}

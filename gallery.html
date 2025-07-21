@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Kami - MehTravel</title>
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="stylesheet" href="gallery.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="index.html" class="logo">MehTravel</a>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="destination.html" class="dropbtn">Destinations <span class="chevron">▾</span></a>
+                    <div class="dropdown-content">
+        <a href="pahang.html">Pulau Tioman</a>
+        <a href="terengganu.html">Pulau Redang</a>
+        <a href="perak.html">Pulau Pangkor</a>
+        <a href="sabah.html">Pulau Sipadan</a>
+        <a href="kedah.html">Pulau Tuba</a>
+      </div>
+    </div>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" class="active">Gallery</a> 
+                <div class="dropdown">
+      <a href="#" class="dropbtn">About<span class="chevron">&#9662;</span></a>
+      <div class="dropdown-content">
+        <a href="story.html">Our Story</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+            <div class="nav-right">
+                <a href="tel:+60123456789" class="contact-number">
+                    <i class="fas fa-phone"></i> +6019-4881401
+                </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-gallery">
+            <div class="hero-content-gallery">
+                <h1 class="reveal-fade-left">Beautiful View from MehTravel</h1>
+                <p class="reveal-fade-right">Explore a stunning collection of images from our unforgettable adventures and destinations.</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2 class="section-title reveal-top">Our Image Gallery</h2>
+            <div class="gallery-grid">
+                <a href="gambar/pl.jpg" data-lightbox="travel-gallery" data-title="Tuba Island" class="gallery-item reveal-bottom">
+                    <img src="gambar/pl.jpg" alt="Langkawi" class="gallery-image">
+                    <div class="overlay">
+                        <p>Tuba Island, Kedah</p>
+                    </div>
+                </a>
+                
+                <a href="gambar/pr.jpg" data-lightbox="travel-gallery" data-title="Redang Island" class="gallery-item reveal-bottom">
+                    <img src="gambar/pr.jpg" alt="Pulau Redang" class="gallery-image">
+                    <div class="overlay">
+                        <p>Redang Island, Terengganu</p>
+                    </div>
+                </a>
+
+                <a href="image/sipa.jpg" data-lightbox="travel-gallery" data-title="Sipadan Island" class="gallery-item reveal-bottom">
+                    <img src="image/sipa.jpg" alt="pulau sipadan" class="gallery-image">
+                    <div class="overlay">
+                        <p>Sipadan Island, Sabah</p>
+                    </div>
+                </a>
+
+                <a href="gambar/pp.jpg" data-lightbox="travel-gallery" data-title="Pangkor Island" class="gallery-item reveal-bottom">
+                    <img src="gambar/pp.jpg" alt="Pulau pangkor" class="gallery-image">
+                    <div class="overlay">
+                        <p>Pangkor Island, Perak</p>
+                    </div>
+                </a>
+
+                <a href="gambar/pt.jpg" data-lightbox="travel-gallery" data-title="Tioman Island" class="gallery-item reveal-bottom">
+                    <img src="gambar/pt.jpg" alt="Pulau tioman" class="gallery-image">
+                    <div class="overlay">
+                        <p>Tioman Island, Pahang</p>
+                    </div>
+                </a>
+
+                <a href="image/scub.jpg" data-lightbox="travel-gallery" data-title="Sipadan Island" class="gallery-item reveal-bottom">
+                    <img src="image/scub.jpg" alt="pulau redang" class="gallery-image">
+                    <div class="overlay">
+                        <p>Sipadan Island, Sabah</p>
+                    </div>
+                </a>
+
+                </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+    <div class="footer-content">
+      <p>&copy; 2025 MehTravel. All rights reserved.</p>
+      <p>Email: amzarsafwan04@gmail.com | Tel: +6019-4881401</p>
+    </div>
+  </footer>
+    
+    <script>
+        
+        if (typeof ScrollReveal !== 'undefined') {
+            ScrollReveal({
+                distance: '50px',
+                duration: 900,
+                easing: 'ease-out',
+                reset: false
+            });
+
+            ScrollReveal().reveal('.hero-gallery .reveal-fade-left', {
+                origin: 'left',
+                delay: 200,
+                distance: '60px'
+            });
+            ScrollReveal().reveal('.hero-gallery .reveal-fade-right', {
+                origin: 'right',
+                delay: 300,
+                distance: '60px'
+            });
+
+            ScrollReveal().reveal('.gallery-section .section-title.reveal-top', {
+                origin: 'top',
+                delay: 100,
+                distance: '40px'
+            });
+
+            ScrollReveal().reveal('.gallery-item.reveal-bottom', {
+                interval: 100,
+                origin: 'bottom',
+                distance: '40px',
+                delay: 200 
+            });
+
+            ScrollReveal().reveal('.cta-gallery .reveal-fade-left', {
+                origin: 'left',
+                delay: 150,
+                distance: '50px'
+            });
+            ScrollReveal().reveal('.cta-gallery .reveal-fade-right', {
+                origin: 'right',
+                delay: 250,
+                distance: '50px'
+            });
+            ScrollReveal().reveal('.cta-gallery .btn-primary.reveal-bottom', {
+                origin: 'bottom',
+                delay: 400,
+                distance: '40px'
+            });
+
+            ScrollReveal().reveal('.main-footer', {
+                origin: 'bottom',
+                distance: '30px',
+                delay: 100
+            });
+
+        } else {
+            console.warn("Pustaka ScrollReveal tidak dimuatkan. Animasi tidak akan berfungsi.");
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>

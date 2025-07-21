@@ -1,0 +1,893 @@
+.destination-hero {
+    width: 100%;
+    height: 550px; /* Tinggi hero banner */
+    background: none; /* Pastikan tiada background image */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    overflow: hidden; /* Penting untuk video dan pseudo-elements */
+}
+
+.hero-video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan video memenuhi ruang tanpa herot */
+    z-index: -1; /* Letakkan video di belakang semua kandungan lain */
+}
+
+/* Overlay Gelap */
+.destination-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.4); /* Overlay gelap kekal */
+    z-index: 0; /* Di atas video, di bawah teks dan blend */
+}
+
+/* Efek Blend Putih di Bawah Hero Banner */
+.destination-hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* Letakkan di bahagian bawah hero */
+    left: 0;
+    width: 100%;
+    height: 160px; /* Laraskan ketinggian blend */
+    background: linear-gradient(to top, white, rgba(255,255,255,0)); /* Gradient dari putih (bawah) ke lutsinar (atas) */
+    z-index: 1; /* Di atas video dan overlay gelap, di bawah teks */
+}
+
+.destination-hero .hero-content {
+    position: relative;
+    z-index: 2; /* Pastikan teks di atas semua overlay */
+    text-align: center;
+}
+
+.destination-hero h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.8);
+}
+
+.breadcrumbs a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* KOD UNTUK .hero-wave TELAH DIBUANG SEPENUHNYA DARI SINI */
+
+
+/* ========================================================== */
+/* === Tajuk Seksyen Utama - "EXPERIENCE DREAMLIKE DESTINATIONS" === */
+/* ========================================================== */
+.section-title-alt {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.destination-category-grid {
+    display: flex;
+    justify-content: center; 
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    padding: 0 15px;
+    max-width: calc(3 * 180px + 2 * 2rem); 
+    max-width: 630px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+
+    /* Gaya Interaktif (Efek Pop/Condong) */
+    transition: transform 0.4s ease-out, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    perspective: 1000px; /* Diperlukan untuk 3D transform */
+    transform-style: preserve-3d; /* Untuk elemen anak dalam ruang 3D */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Bayangan asas */
+    text-align: center; /* Memusatkan teks di bawah gambar */
+
+    width: 180px; /* Kekalkan lebar kad */
+}
+
+/* style.css */
+
+/* Tambah ini di mana-mana dalam style.css anda */
+.btn-discover {
+    display: inline-block; /* Untuk membenarkan padding dan margin */
+    background-color: #008080; /* Warna butang (mengikut tema MehTravel) */
+    color: #fff; /* Warna teks butang */
+    padding: 10px 25px; /* Padding dalam butang */
+    border-radius: 25px; /* Sudut bulat untuk butang */
+    text-decoration: none; /* Buang garis bawah pautan */
+    font-weight: 600; /* Ketebalan fon */
+    font-size: 0.95em; /* Saiz fon */
+    margin-top: 20px; /* Jarak dari teks di atas */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transisi untuk hover */
+    border: none; /* Buang border lalai */
+    cursor: pointer; /* Tukar kursor kepada pointer */
+}
+
+.btn-discover:hover {
+    background-color: #006666; /* Warna lebih gelap apabila hover */
+    transform: translateY(-2px); /* Kesan sedikit naik apabila hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Tambah bayang */
+}
+
+/* Jika anda ada gaya untuk .destination-card, pastikan ia menyokong butang ini */
+.destination-card .card-content {
+    /* Pastikan ada padding atau margin yang cukup agar butang tidak melekat pada tepi */
+    padding: 20px; /* Contoh padding, sesuaikan dengan CSS anda */
+    display: flex; /* Guna flexbox untuk menyusun item */
+    flex-direction: column; /* Susun item secara menegak */
+    justify-content: space-between; /* Tolak butang ke bawah jika ada ruang */
+    align-items: center; /* Pusatkan teks dan butang */
+    height: 100%; /* Penting untuk flexbox mengisi ruang */
+}
+
+/* Untuk memastikan teks tidak terlalu panjang dan butang sentiasa di bawah */
+.destination-card .card-content p {
+    flex-grow: 1; /* Benarkan perenggan mengambil ruang yang ada */
+    margin-bottom: 15px; /* Jarak dari butang */
+}
+
+.category-img-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 3px solid #eee; /* Border asas */
+    transition: border-color 0.3s ease;
+}
+
+.category-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Sesuaikan transition imej */
+}
+
+.category-card span {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.category-card:hover,
+.category-card.active {
+    transform: translateY(-10px) rotateX(5deg); /* Gerak ke atas dan condong sedikit */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Bayangan lebih jelas */
+    color: #008080;
+    border-color: #008080; /* Gaya border untuk hover */
+}
+
+.category-card:hover .category-img-wrapper,
+.category-card.active .category-img-wrapper {
+    border-color: #008080;
+}
+
+.category-card:hover .category-img-wrapper img {
+    transform: scale(1.1); /* Imej membesar lebih sedikit */
+}
+
+
+/* ========================================================== */
+/* === Gaya Tab (Pulau/Negeri) === */
+/* ========================================================== */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; /* Jarak dari kategori grid */
+    margin-bottom: 2rem; /* Jarak ke kandungan tab */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    position: relative;
+    outline: none; /* Buang outline focus default */
+}
+
+.tab-button.active {
+    color: #008080;
+    border-bottom: 3px solid #008080;
+}
+
+.tab-button:not(.active):hover {
+    color: #006666;
+}
+
+.tab-content {
+    display: none; /* Sembunyikan secara lalai */
+    padding-top: 2rem;
+    animation: fadeInTab 0.5s ease-out; /* Animasi untuk tab content */
+}
+
+.tab-content.active {
+    display: block; /* Tunjukkan tab yang aktif */
+}
+
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ========================================================== */
+/* === Grid Kad Destinasi === */
+/* ========================================================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tetapkan 3 kolum yang sama besar */
+    gap: 30px; /* Jarak antara kad */
+    padding: 20px 5%; /* Padding untuk grid dari tepi */
+    justify-items: center; /* Memusatkan item dalam grid */
+    align-items: start; 
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 400px; 
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info-overlay {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    padding: 12px 6px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    z-index: 2;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.info-item i {
+    color: #008080;
+    font-size: 1rem;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #008080;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.btn-card {
+    display: inline-block;
+    background-color: #008080;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-card:hover {
+    background-color: #006666;
+    animation: pulse 0.8s infinite alternate;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.03); 
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .destination-hero h2 {
+        font-size: 3rem;
+    }
+    .section-title-alt {
+        font-size: 2rem;
+    }
+    .destination-category-grid {
+        gap: 1.5rem;
+        max-width: calc(2 * 150px + 1 * 1.5rem + 2 * 15px); 
+    }
+    .category-card {
+        width: 150px;
+    }
+    .category-img-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .tab-button {
+        font-size: 1.1rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .destination-hero {
+        height: 300px;
+        padding-left: 0; 
+    }
+    .destination-hero h2 {
+        font-size: 2.5rem;
+    }
+    .section-title-alt {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+    }
+    .destination-category-grid {
+        gap: 1rem;
+        max-width: 180px;
+    }
+    .category-card {
+        width: 100%;
+        max-width: 120px; 
+    }
+    .category-img-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    .category-card span {
+        font-size: 0.9rem;
+    }
+    .tab-button {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        padding: 20px 15px; 
+    }
+    .card {
+        max-width: 400px;
+    }
+    .card img {
+        height: 180px;
+    }
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-info-overlay {
+        top: 150px;
+        width: 90%;
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+    .info-item i {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .destination-hero h2 {
+        font-size: 2rem;
+    }
+    .breadcrumbs {
+        font-size: 0.8rem;
+    }
+    .section-title-alt {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+    .category-card {
+        width: 100%; 
+        max-width: 100px;
+    }
+    .category-img-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+    .card img {
+        height: 150px;
+    }
+    .card-content {
+        padding: 15px;
+    }
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+    .card-content p {
+        font-size: 0.9rem;
+    }
+    .btn-card {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    .card-info-overlay {
+        top: 130px; 
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+    .info-item i {
+        font-size: 0.8rem;
+    }
+}
+
+.island-description-section {
+    padding: 4rem 5%;
+    max-width: 900px; 
+    margin: 0 auto; 
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.island-description-section img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+    margin-bottom: 2rem; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.island-description-section h1 {
+    font-size: 2.8rem;
+    color: #008080;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700; 
+}
+
+.island-description-section h2 {
+    font-size: 2rem;
+    color: #006666; 
+    margin-top: 2.5rem; 
+    margin-bottom: 1rem; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 0.5rem; 
+}
+
+.island-description-section ul {
+    list-style: disc; 
+    margin-left: 20px; 
+    margin-bottom: 1.5rem;
+    padding-left: 0; 
+}
+
+.island-description-section ul li {
+    margin-bottom: 0.5rem; 
+}
+
+.island-description-section p {
+    margin-bottom: 1.5rem;
+}
+
+.island-description-section p:last-of-type {
+    margin-bottom: 0;
+}
+
+.island-description-section a {
+    color: #008080;
+    text-decoration: none; 
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.island-description-section a:hover {
+    color: #006666;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .island-description-section {
+        padding: 3rem 4%;
+        font-size: 1rem;
+    }
+    .island-description-section h1 {
+        font-size: 2.2rem;
+    }
+    .island-description-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .island-description-section {
+        padding: 2rem 3%;
+        font-size: 0.95rem;
+    }
+    .island-description-section h1 {
+        font-size: 1.8rem;
+    }
+    .island-description-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.island-description-section {
+    padding: 4rem 5%; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.island-description-section img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.island-description-section h1 {
+    font-size: 2.8rem;
+    color: #008080; 
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    font-weight: 700;
+}
+
+.island-description-section h2 {
+    font-size: 2rem;
+    color: #006666; 
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 0.5rem; 
+}
+
+.island-description-section ul {
+    list-style: disc; 
+    margin-left: 20px;
+    margin-bottom: 1.5rem;
+    padding-left: 0; 
+}
+
+.island-description-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.island-description-section p {
+    margin-bottom: 1.5rem; 
+}
+
+.island-description-section p:last-of-type {
+    margin-bottom: 0;
+}
+
+.island-description-section a {
+    color: #008080;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.island-description-section a:hover {
+    color: #006666;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .island-description-section {
+        padding: 3rem 4%;
+        font-size: 1rem;
+    }
+    .island-description-section h1 {
+        font-size: 2.2rem;
+    }
+    .island-description-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .island-description-section {
+        padding: 2rem 3%;
+        font-size: 0.95rem;
+    }
+    .island-description-section h1 {
+        font-size: 1.8rem;
+    }
+    .island-description-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.image-gallery-section {
+    padding: 4rem 5%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.image-gallery-section h2 {
+    font-size: 2.2rem;
+    color: #006666;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.carousel-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-slide {
+    display: none; 
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 450px; 
+    object-fit: cover; 
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.caption-text {
+    color: #f2f2f2;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media (max-width: 768px) {
+    .image-gallery-section {
+        padding: 2rem 3%;
+    }
+    .carousel-slide img {
+        height: 300px; 
+    }
+    .prev, .next {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    .caption-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide img {
+        height: 200px;
+    }
+}
+
+.interactive-map-section {
+    padding: 4rem 5%; 
+    max-width: 900px; 
+    margin: 4rem auto;
+    text-align: center;
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+
+}
+
+.interactive-map-section h2 {
+    font-size: 2.2rem;
+    color: #006666;
+    margin-bottom: 2rem;
+    text-align: center; 
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.8rem;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%; 
+    background: #e0e0e0;
+    border-radius: 8px;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    border: 0;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .interactive-map-section {
+        padding: 2.5rem 3%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .interactive-map-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .interactive-map-section {
+        padding: 2rem 2%;
+    }
+    .interactive-map-section h2 {
+        font-size: 1.5rem;
+    }
+    .map-container {
+        padding-bottom: 75%; 
+    }
+}
